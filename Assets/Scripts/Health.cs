@@ -19,7 +19,7 @@ public class Health : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+   /* void Update()
     {
         for (int i = 0; i < hearts.Length; i++)
         {
@@ -47,4 +47,6 @@ public class Health : MonoBehaviour
             }
         }
     }
+
+    */
 }
