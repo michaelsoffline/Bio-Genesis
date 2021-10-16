@@ -42,7 +42,7 @@ public class PlayerCombat : MonoBehaviour
         }
     }
 
-    void OnDrawGizmoSelected()
+    void OnDrawGizmosSelected()
     {
         if (attackPoint == null)
             return;
