@@ -11,7 +11,7 @@ public class EnergyBlast : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -25,7 +25,10 @@ public class EnergyBlast : MonoBehaviour
 
     void Shoot()
     {
-        Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        if (GetComponent<EnergyHandling>().currentEnergy > projectile)
+        {
+            Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+        }
         GetComponent<EnergyHandling>().ReduceEnergy(projectile);
     }
 }

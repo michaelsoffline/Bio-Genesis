@@ -25,12 +25,12 @@ public class Health : MonoBehaviour
     {
         for (int i = 0; i < hearts.Length; i++)
         {
-            if(health > numOfHearts)
+            if (health > numOfHearts)
             {
                 health = numOfHearts;
             }
 
-            if(i < health)
+            if (i < health)
             {
                 hearts[i].sprite = fullHeart;
             }
@@ -48,7 +48,7 @@ public class Health : MonoBehaviour
                 hearts[i].enabled = false;
             }
 
-            if(isDead == true)
+            if (isDead == true)
             {
                 Debug.Log("You died");
             }
@@ -58,7 +58,7 @@ public class Health : MonoBehaviour
     public void TakeDamage(int damage)
     {
         health -= damage;
-        if(health < 1)
+        if (health < 1)
         {
             isDead = true;
         }

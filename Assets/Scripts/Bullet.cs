@@ -17,13 +17,13 @@ public class Bullet : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void OnTriggerEnter2D(Collider2D hitInfo)
     {
         Enemy1 enemy = hitInfo.GetComponent<Enemy1>();
-        if(enemy != null)
+        if (enemy != null)
         {
             enemy.TakeDamage(damage);
         }
