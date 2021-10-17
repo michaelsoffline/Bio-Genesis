@@ -6,6 +6,7 @@ public class EnergyBlast : MonoBehaviour
 {
     public Transform firePoint;
     public GameObject bulletPrefab;
+    public float projectile = 20;
 
     // Start is called before the first frame update
     void Start()
@@ -25,6 +26,6 @@ public class EnergyBlast : MonoBehaviour
     void Shoot()
     {
         Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-
+        GetComponent<EnergyHandling>().ReduceEnergy(projectile);
     }
 }

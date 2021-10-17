@@ -12,10 +12,12 @@ public class Health : MonoBehaviour
     public Sprite fullHeart;
     public Sprite emptyHeart;
 
+    public bool isDead;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        health = numOfHearts;
     }
 
     // Update is called once per frame
@@ -45,6 +47,20 @@ public class Health : MonoBehaviour
             {
                 hearts[i].enabled = false;
             }
+
+            if(isDead == true)
+            {
+                Debug.Log("You died");
+            }
+        }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        health -= damage;
+        if(health < 1)
+        {
+            isDead = true;
         }
     }
 }

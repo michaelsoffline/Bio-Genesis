@@ -33,7 +33,14 @@ public class EnergyHandling : MonoBehaviour
 
     public void ReduceEnergy(float energy)
     {
-        currentEnergy -= energy;
-        energyBar.fillAmount -= energy / myEnergy;
+        if(energy <= currentEnergy)
+        {
+            currentEnergy -= energy;
+            energyBar.fillAmount -= energy / myEnergy;
+        }
+        else
+        {
+            Debug.Log("Not enough Energy");
+        }
     }
 }
