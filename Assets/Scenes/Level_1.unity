@@ -560,7 +560,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 199733705}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -47.16414, y: -19.092358, z: -20}
+  m_LocalPosition: {x: -49.800426, y: -19.080406, z: -20}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4774,7 +4774,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1466700063}
   - component: {fileID: 1466700062}
-  m_Layer: 0
+  m_Layer: 1
   m_Name: LevelBounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6189,7 +6189,7 @@ MonoBehaviour:
   attackPoint: {fileID: 1945389648}
   enemyLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   attackRate: 2
   attackRange: 1.5
   attackDamage: 5
@@ -6234,7 +6234,7 @@ CapsuleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2000536756}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -6324,7 +6324,7 @@ Transform:
   m_GameObject: {fileID: 2000536756}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -49.89, y: -19.08, z: -10}
-  m_LocalScale: {x: 3.086452, y: 2.8992927, z: 1.3641}
+  m_LocalScale: {x: 5, y: 2.8992927, z: 1.3641}
   m_Children:
   - {fileID: 1945389648}
   - {fileID: 1924047239}

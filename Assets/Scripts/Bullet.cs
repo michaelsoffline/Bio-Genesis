@@ -27,6 +27,7 @@ public class Bullet : MonoBehaviour
         {
             enemy.TakeDamage(damage);
         }
+        Debug.Log(hitInfo.name);
         Destroy(gameObject);
     }
 }
