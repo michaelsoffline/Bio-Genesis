@@ -8,7 +8,7 @@ public class EnergyHandling : MonoBehaviour
     public Image energyBar;
     public float myEnergy;
 
-    private float currentEnergy;
+    public float currentEnergy;
 
     // Start is called before the first frame update
     void Start()
@@ -19,13 +19,13 @@ public class EnergyHandling : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(currentEnergy < myEnergy)
+        if (currentEnergy < myEnergy)
         {
             energyBar.fillAmount = Mathf.MoveTowards(energyBar.fillAmount, 1f, Time.deltaTime * 0.01f);
             currentEnergy = Mathf.MoveTowards(currentEnergy / myEnergy, 1f, Time.deltaTime * 0.01f) * myEnergy;
         }
 
-        if(currentEnergy < 0)
+        if (currentEnergy < 0)
         {
             currentEnergy = 0;
         }
@@ -33,7 +33,14 @@ public class EnergyHandling : MonoBehaviour
 
     public void ReduceEnergy(float energy)
     {
-        currentEnergy -= energy;
-        energyBar.fillAmount -= energy / myEnergy;
+        if (energy <= currentEnergy)
+        {
+            currentEnergy -= energy;
+            energyBar.fillAmount -= energy / myEnergy;
+        }
+        else
+        {
+            Debug.Log("Not enough Energy");
+        }
     }
 }
