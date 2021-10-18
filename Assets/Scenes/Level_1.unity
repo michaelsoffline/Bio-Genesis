@@ -6125,9 +6125,9 @@ GameObject:
   - component: {fileID: 2000536760}
   - component: {fileID: 2000536759}
   - component: {fileID: 2000536758}
-  - component: {fileID: 2000536757}
+  - component: {fileID: 2000
   - component: {fileID: 2000536766}
-  - component: {fileID: 2000536762}
+  - component: {fileID: 2000
   m_Layer: 0
   m_Name: A.D.A.M
   m_TagString: Untagged
@@ -6146,10 +6146,10 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 63471c0837175c6418cf476b946cd347, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdenti
   energyBar: {fileID: 1753379271}
   myEnergy: 100
-  currentEnergy: 0
+  currentEne
 --- !u!114 &2000536758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6164,7 +6164,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 5
   numOfHearts: 5
-  hearts:
+  he
   - {fileID: 2018794724}
   - {fileID: 1855358654}
   - {fileID: 1320068697}
@@ -6172,7 +6172,7 @@ MonoBehaviour:
   - {fileID: 1181075527}
   fullHeart: {fileID: 21300000, guid: fed24bd82cefc0c4a8ef64dab6231b53, type: 3}
   emptyHeart: {fileID: 21300002, guid: fed24bd82cefc0c4a8ef64dab6231b53, type: 3}
-  isDead: 0
+  isDe
 --- !u!114 &2000536759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6186,13 +6186,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 2000536760}
-  attackPoint: {fileID: 1945389648}
+  attackPoint: {fileID: 1945389
   enemyLayers:
     serializedVersion: 2
+<<<<<<< HEAD
     m_Bits: 64
   attackRate: 2
+=======
+    m_Bits: 0
+  attackRate
+>>>>>>> 14fb241b686180ab3ca745ae4b258a3e5cd56f69
   attackRange: 1.5
-  attackDamage: 5
+  attackDamage
 --- !u!95 &2000536760
 Animator:
   serializedVersion: 3
@@ -6226,23 +6231,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BASE_SPEED: 5
   JUMP_FORCE: 7
-  animator: {fileID: 2000536760}
+  animator: {fileID: 200053676
 --- !u!70 &2000536762
-CapsuleCollider2D:
+CapsuleCollider2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2000536756}
+<<<<<<< HEAD
   m_Enabled: 0
   m_Density: 1
+=======
+  m_Enabled: 1
+  m_Density: 
+>>>>>>> 14fb241b686180ab3ca745ae4b258a3e5cd56f69
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.37, y: 0.52}
-  m_Direction: 0
+  m_Direction: 
 --- !u!50 &2000536763
 Rigidbody2D:
   serializedVersion: 4
