@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
 
     private bool isGrounded = false;
 
+    bool canDoubleJump;
+
     private void OnCollisionStay2D(Collision2D collision)
     {
         isGrounded = true;
@@ -34,19 +36,29 @@ public class PlayerController : MonoBehaviour
 
         rb.velocity = new Vector2((dir * currentSpeed).x, rb.velocity.y);
 
-        if(horizontal < 0)
+        //Flip Player Sprite
+        Vector3 characterScale = transform.localScale;
+        if(Input.GetAxis("Horizontal") < 0)
         {
-            this.transform.rotation = new Quaternion(0, -1, 0, 0);
+            characterScale.x = -5;
         }
-        else
+        if (Input.GetAxis("Horizontal") > 0)
         {
-            this.transform.rotation = new Quaternion(0, 0, 0, 0);
+            characterScale.x = 5;
         }
+        transform.localScale = characterScale;
 
         //jumping
-        if(vertical > 0 && Mathf.Approximately(rb.velocity.y, 0))
+        if (vertical > 0 && Mathf.Approximately(rb.velocity.y, 0))
         {
             rb.AddRelativeForce(new Vector2(0, JUMP_FORCE), ForceMode2D.Impulse);
+            canDoubleJump = true;
+        }
+        //Double Jump
+        if(vertical > 0 && rb.velocity.y < 0 && canDoubleJump)
+        {
+            rb.AddRelativeForce(new Vector2(0, JUMP_FORCE), ForceMode2D.Impulse);
+            canDoubleJump = false;
         }
 
         //Walking animation
